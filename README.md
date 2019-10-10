@@ -1,10 +1,10 @@
-### GameSoftwareD
+# GameSoftwareD
 
 **We'll make first-person parking game [PC]**
 
 Unity version - 2019. 2.6f1
-
-# Game Scene
+---
+### Game Scene
 * Scene0
 
     * 시작 화면
@@ -29,7 +29,7 @@ Unity version - 2019. 2.6f1
 
     * 점수, 리스타트, 홈 버튼 구현
 
-# Car
+### Car
 
 * UI 
 
@@ -45,7 +45,7 @@ Unity version - 2019. 2.6f1
 
     * w : 엑셀, s : 브레이크, a : 좌회전, d : 우회전
 
-# Map
+### Map
 
 * 에셋이나 패키지 찾아보기
 
