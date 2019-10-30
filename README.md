@@ -2,9 +2,9 @@
 
 **We'll make first-person parking game [PC]**
 
-Unity version - 2019.2.10f1
+**Unity version - 2019.2.10f1**
 
-** 항상 작업 시작하기전에 FETCH & PULL 하기!!!!!! ** 
+**항상 작업 시작하기전에 Github에서 FETCH & PULL 하기!!!!!!**
 
 [이전 회의록](https://github.com/anheew1/GameSoftwareD/wiki/1st-Meeting-Log)
 
