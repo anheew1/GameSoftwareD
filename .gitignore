@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/Parking Game/[Ll]ibrary/
-/Parking Game/[Tt]emp/
-/Parking Game/[Oo]bj/
-/Parking Game/[Bb]uild/
-/Parking Game/[Bb]uilds/
-/Parking Game/[Ll]ogs/
-/Parking Game/[Mm]emoryCaptures/
+Parking Game/[Ll]ibrary/
+Parking Game/[Tt]emp/
+Parking Game/[Oo]bj/
+Parking Game/[Bb]uild/
+Parking Game/[Bb]uilds/
+Parking Game/[Ll]ogs/
+Parking Game/[Mm]emoryCaptures/
 
 # Never ignore Asset meta data
 !/Parking Game/[Aa]ssets/**/*.meta
@@ -60,4 +60,5 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
 
