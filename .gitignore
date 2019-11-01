@@ -3,13 +3,13 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 
-Parking Game/Library
-Parking Game/Temp
-Parking Game/Obj
-Parking Game/Build
-Parking Game/Builds
-Parking Game/Logs
-Parking Game/MemoryCaptures
+Parking Game/Library/
+Parking Game/Temp/
+Parking Game/Obj/
+Parking Game/Build/
+Parking Game/Builds/
+Parking Game/Logs/
+Parking Game/MemoryCaptures/
 
 # Never ignore Asset meta data
 !/Parking Game/Assets/**/*.meta
