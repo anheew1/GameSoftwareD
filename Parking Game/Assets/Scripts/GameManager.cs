@@ -5,13 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-
     static bool isEnded = false;    //종료지점인지!
 
-
     /*
-    
-     
     Vector3 StartingPos;            //시작위치
     Quaternion StartingRotate;      //시작로테이트
     bool isStarted = false;         //시작지점인지!
@@ -112,15 +108,13 @@ public class GameManager : MonoBehaviour
 
     
     public static void EndGame(int health){       //게임이 종료되면!
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         //++stageLevel;
         /*
         if (health <= 0){
             isEnded = true;
         }
          */
-        
-
         /*
         //생명력이 다 달아서 endgame된거면 시작 씬으로 돌아간다.
         
@@ -135,13 +129,11 @@ public class GameManager : MonoBehaviour
          */
         
     }
+    
     /* 
     void StartGame(){       //게임시작하면!
         Time.timeScale = 1f;    //게임진행
-
     }
     */
-    
-    
 
 }
