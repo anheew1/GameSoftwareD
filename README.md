@@ -75,6 +75,18 @@ D
 
 * 전진,후진 주차 둘다 가능하되 후진 주차 시 점수를 더 많이 얻음
 
+## 11월 4일 차량팀 개발 사항
+* CarDamage(차량 손상 제어)
+   * void Die() : 차량 다 파손 됐을 경우 종료
+   * void  OnTriggerEnter(Collider other) : 차량 충돌 제어
+
+* CarUIManager(차량 화면 UI)
+   * Damage : 차량 손상도
+   * void OnGUI() : 차량 손상도 표시
+
+* GameManager(게임 로직 구현) 
+
+
 ## 그 외 추가로 구현하고 싶은 것
 * 미니맵
 
