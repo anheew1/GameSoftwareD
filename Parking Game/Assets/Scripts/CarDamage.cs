@@ -1,0 +1,179 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CarDamage : MonoBehaviour
+{
+
+    int health = CarUIManager.health;
+    /*
+    public float movePower = 1f;    //좌우속도
+    public float jumpPower = 1f;    //점프속도
+     
+    
+
+    SpriteRenderer spriteRenderer;      //SpriteRenderer 선언
+
+    Vector3 movement;      
+    
+    bool isJumping = false;     //점프 상태
+    bool isUnBeatTime = false;  //무적 상태
+    
+    */
+
+    bool isDie = false;     //플레이어 사망
+    Rigidbody rigid;          //리지드 선언
+
+    //int health = GameUIManager.health;
+    
+    void Start()
+    {
+        rigid = gameObject.GetComponent<Rigidbody>();     //리지드 컴포넌트를 가져온다.
+
+        /*
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();     //SpriteRenderer 컴포넌트를 가져온다.
+         */
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+           
+    }
+    
+    void FixedUpdate(){
+
+        /* 
+        Move();
+        Jump();
+        */
+        
+        
+    }
+
+    /*
+    void Die(){     //사망함수 
+        
+        isDie = true;
+        transform.position = new Vector3(0.0f, 0.5f, 0.0f);     //캐릭터 위치를 초기화!
+        
+    }
+     */
+    
+
+    
+    void Move(){        //이동 함수
+    /*
+        Vector3 moveVelocity = Vector3.zero;
+
+        if(Input.GetAxisRaw("Horizontal")<0 ){          //왼쪽으로 움직인다.
+            moveVelocity = Vector3.left;
+            transform.localScale = new Vector3(1,1,1);
+        }
+        else if(Input.GetAxisRaw("Horizontal") >0){     //오른쪽으로 움직인다.
+            moveVelocity = Vector3.right;
+            transform.localScale = new Vector3(-1,1,1);
+        }
+
+        transform.position += moveVelocity * movePower * Time.deltaTime;
+    
+     */
+        
+    }
+
+    void Jump(){        //점프 함수
+
+    /*
+        if (!isJumping){    //점프가 아니라면 빠져나감
+            return;
+        }
+
+        rigid.velocity = Vector2.zero;
+
+        Vector2 jumpVelocity = new Vector2(0,jumpPower);
+        rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
+
+        isJumping = false;      //점프 했으니 false 만듦
+    }
+    
+     */
+    }
+
+
+void OnTriggerEnter(Collider other)
+    {
+        
+        //장애물을 만나게 되면
+        if (other.gameObject.tag == "ObstacleFix" )
+        {
+            Debug.Log("1");
+            
+            health--;       //생명력 감소
+
+            if(health <=0){     //생명력이 다 떨어지면 게임종료
+                other.enabled = false;
+                GameManager.EndGame(health);
+            }
+            /* 
+            //넉백
+            Vector2 killVelocity = new Vector2(-7f, 5f);
+            rigid.AddForce(killVelocity, ForceMode2D.Impulse);
+
+            
+            
+            //무적타임이라는 bool 변수 선언 후 피격 당할 때 마다 활성화 
+            if(health >0){
+                isUnBeatTime = true;
+                StartCoroutine("UnBeatTime");
+            }
+
+            
+            */
+
+        }
+        /*
+        //종료포탈에 닿으면
+        if (other.gameObject.tag == "end" )
+        {
+            other.enabled = false;
+            Game_Manager.EndGame(health);
+            
+        }
+        //맵 밖으로 떨어지면
+        if (other.gameObject.tag == "falldown" )
+        {
+            other.enabled = false;
+            health = 0;
+            Game_Manager.EndGame(health);
+        }
+         */
+        
+        
+    }
+
+
+/*
+//무적상태 표현
+ IEnumerator UnBeatTime(){
+
+     int countTime = 0;
+     //일정시간동안 캐릭터 깜빡임
+     while (countTime < 3){
+
+         if (countTime%2 == 0){
+             spriteRenderer.color = new Color32(255,255,255,90);
+         }else{
+             spriteRenderer.color = new Color32(255,255,255,180);
+         }
+
+         yield return new WaitForSeconds(0.2f);
+         countTime++;
+     }
+     spriteRenderer.color = new Color32(255,255,255,255);
+     isUnBeatTime = false;
+     yield return null;
+ }
+
+*/
+ 
+}
