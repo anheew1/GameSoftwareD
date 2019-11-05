@@ -86,6 +86,16 @@ D
 
 * GameManager(게임 로직 구현) 
 
+## 11월 5일 차량팀 개발 사항
+* GearManager(기어 구동 제어)
+   * GearStatus(기어 상태)
+
+* CarUIManager(차량 화면 관리)
+   * Canvas, Gear, Stick 오브젝트 추가
+   * 기어 상태에 따라 Stick위치 변경 구현
+
+* WheelDrive(바퀴 작동)
+   * GearManager에서 GearStatus를 가져와서 토크 결정  
 
 ## 그 외 추가로 구현하고 싶은 것
 * 미니맵
