@@ -81,7 +81,8 @@ public class WheelDrive : MonoBehaviour
 		}
 		
 		if (Input.GetKey(KeyCode.W)){
-			torque = maxTorque * GearManager.GearStatus;
+			// 기어상태(1일때 전진, -1일때 후진, 0일 때 주차)를 최대 토크에 곱해서 현재 토크 설정
+			torque = maxTorque * GearManager.GearStatus; 
 		}
 		//x누르면 브레이크 힘 30000f
 		float handBrake = Input.GetKey(KeyCode.S) ? brakeTorque : 0;

@@ -8,10 +8,10 @@ public class CarDamage : MonoBehaviour
     /*
     Vector3 movement;      
     SpriteRenderer spriteRenderer;      //차 파손 시 깜빡임을 위한 SpriteRenderer 선언
-    bool isUnBeatTime = false;  //무적 상태
+    bool isUnBeatTime = false;          //무적 상태
     */
 
-    Rigidbody rigid;          //리지드 선언
+    Rigidbody rigid;                                        //리지드 선언
     
     void Start()
     {
@@ -26,36 +26,22 @@ public class CarDamage : MonoBehaviour
     {
     }
 
-    
-    void Die(){     //종료함수 
-        
-        transform.position = new Vector3(0.0f, 0.5f, 0.0f);     //캐릭터 위치를 초기화!
-        CarUIManager.Damage = 3;
-
-    }
-     
-  
-
 void OnTriggerEnter(Collider other)
     {
         
-        //장애물을 만나게 되면
-        if (other.gameObject.tag == "ObstacleFix" )
+        
+        if (other.gameObject.tag == "ObstacleFix" )         //장애물을 만나게 되면
         {
 
-            CarUIManager.Damage--;       //차량 파손
+            CarUIManager.Damage--;                          //차량 파손
 
-            if(CarUIManager.Damage <=0){     //다 파손 되면 게임종료
-                Die();
-            }
-
-/*
-            //무적타임이라는 bool 변수 선언 후 파손 될 때 마다 활성화 
-            if(CarUIManager.Damage >0){
-                isUnBeatTime = true;
-                StartCoroutine("UnBeatTime");
-            }
- */
+            if(CarUIManager.Damage <=0){                    //다 파손 되면 게임종료
+                GameManager.EndGame();
+            } 
+        }
+        
+        else if (other.gameObject.tag == "GoalSpot"){       //도착지점이라면  
+            GameManager.PassGame();
         }
     }
 
@@ -80,6 +66,5 @@ void OnTriggerEnter(Collider other)
      isUnBeatTime = false;
      yield return null;
  }
-
  */
 }
