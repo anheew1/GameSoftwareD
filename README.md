@@ -28,6 +28,8 @@ PlayTime (플레이 시간)
 
 StarRank (부가사항)
 
+GoalSpot (도착지점)
+
 ### Scenes
 Scene - 시작화면, Scene명 ex) StartScene (확정x)
 
@@ -93,9 +95,21 @@ D
 * CarUIManager(차량 화면 관리)
    * Canvas, Gear, Stick 오브젝트 추가
    * 기어 상태에 따라 Stick위치 변경 구현
-
+   * 현재 스테이지 정보 표시
+   * Start UI 구현
+   * End UI 구현(실패시)
+   * Pass UI 구현(성공시)
+   
 * WheelDrive(바퀴 작동)
    * GearManager에서 GearStatus를 가져와서 토크 결정  
+
+* CarDamage(차량 손상 제어)
+   * 도착지점에 닿으면 스테이지 종료
+ 
+* GameManager(게임 로직 구현) 
+   * Scene index 생성
+   * 차량 파손으로 인한 종료 이벤트 생성
+   * 도착지점에 의한 종료 이벤트 
 
 ## 그 외 추가로 구현하고 싶은 것
 * 미니맵
