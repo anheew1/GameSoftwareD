@@ -81,17 +81,13 @@ public class WheelDrive : MonoBehaviour
 		}
 		
 		if (Input.GetKey(KeyCode.W)){
-			torque = maxTorque;
+			torque = maxTorque * GearManager.GearStatus;
 		}
 		//x누르면 브레이크 힘 30000f
 		float handBrake = Input.GetKey(KeyCode.S) ? brakeTorque : 0;
 		if (Input.GetKey(KeyCode.S)) {
 			handBrake = brakeTorque;
 			torque = 0.0f;
-		}
-		
-		if (Input.GetKeyDown(KeyCode.R)){
-			maxTorque *= -1;
 		}
 		foreach (WheelCollider wheel in m_Wheels)
 		{
