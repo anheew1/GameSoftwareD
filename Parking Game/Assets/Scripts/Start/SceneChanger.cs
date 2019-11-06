@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public void changeToSelectStage()
+    public void changeToSelectMap()
     {
-        SceneManager.LoadScene("SelectStage");
+        SceneManager.LoadScene("SelectMap");
     }
     public void changeToStart()
     {
