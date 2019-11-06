@@ -580,7 +580,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 839207267}
-        m_MethodName: changeToSelectMap
+        m_MethodName: ChangeToSelectMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
