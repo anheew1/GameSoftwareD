@@ -43,8 +43,6 @@ public class CarUIManager : MonoBehaviour
     }
 
     void OnGUI(){      
-    
-    
 
     //차량파손 상태 GUI 시작
      GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
@@ -59,8 +57,12 @@ public class CarUIManager : MonoBehaviour
          heart += "<color=#ff0000>" + "♥ " + "</color>";
      }
      GUILayout.Label(heart);
-
+     
      GUILayout.FlexibleSpace();
+
+     GUILayout.Label(TimeManager.TimeText);
+     GUILayout.Space(15);
+
      GUILayout.EndHorizontal();
      GUILayout.FlexibleSpace();
      GUILayout.EndVertical();
@@ -150,7 +152,27 @@ public class CarUIManager : MonoBehaviour
             GUILayout.BeginVertical();        
             GUILayout.FlexibleSpace();
 
+            GUILayout.BeginHorizontal();        
+            GUILayout.FlexibleSpace();
             GUILayout.Label("<color=#000000>" + "성공!"+ "</color>");
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();        
+            GUILayout.FlexibleSpace();
+
+            //노란 별로 랭크 표현
+            string Rank = "";
+            for (int i=0; i<ScoreManager.getRank();i++){
+                Rank += "<color=#ffff00>" + "★ " + "</color>";
+            }
+            GUILayout.Label(Rank);
+            
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+            
+            GUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
 
             //stage 0 로 돌아가기(Home)
             if (GUILayout.Button("<color=#000000>" + "Home"+ "</color>")){
@@ -176,10 +198,14 @@ public class CarUIManager : MonoBehaviour
                 GameManager.IsStarted = false;
             }
             GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+
+            GUILayout.FlexibleSpace();
             GUILayout.EndVertical();        
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
-            GUILayout.EndArea();        
+            GUILayout.EndArea();   
+            
     }
  }
 }
