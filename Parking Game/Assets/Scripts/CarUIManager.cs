@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class CarUIManager : MonoBehaviour
 {
     public int maxDamage = 3;               //최대 생명력
@@ -20,7 +21,7 @@ public class CarUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.R)) //기어 변경 키 눌렸는지 확인
         {
             if(GearManager.GearStatus == -1) //기어 상태가 R인 경우
@@ -42,6 +43,8 @@ public class CarUIManager : MonoBehaviour
     }
 
     void OnGUI(){      
+    
+    
 
     //차량파손 상태 GUI 시작
      GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
@@ -89,7 +92,7 @@ public class CarUIManager : MonoBehaviour
     //현재 어느 스테이지에 있는지 알려주기 위한 GUI 끝
     
 
-
+    
     if (!GameManager.IsStarted ){                                               //게임 시작했다면!
             GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));      //시작
             GUILayout.BeginHorizontal();        
