@@ -19,7 +19,7 @@ public class GearManager : MonoBehaviour
         {
             if (GearStatus == 0) // 기어가 주차 상태일때
             {
-                GearStatus = 1; // 전진으로 변경
+                GearStatus = -1; // 전진으로 변경
             }
 			else // 기어가 주차 상태가 아닐때
                 GearStatus *= -1; // 전진, 후진 사이에서 변경
@@ -28,6 +28,10 @@ public class GearManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) // 주차 키 입력 확인
         {
             GearStatus *= 0; // 주차 상태로 변경
+        }
+        if (GameManager.IsEnded || GameManager.IsSuccess)
+        {
+            GearStatus = 0;
         }
     }
 
