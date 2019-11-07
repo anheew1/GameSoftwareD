@@ -579,7 +579,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 839207267}
+      - m_Target: {fileID: 819589479}
         m_MethodName: ChangeToSelectMap
         m_Mode: 1
         m_Arguments:
@@ -637,6 +637,7 @@ GameObject:
   - component: {fileID: 819589478}
   - component: {fileID: 819589477}
   - component: {fileID: 819589476}
+  - component: {fileID: 819589479}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -692,49 +693,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &839207266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 839207268}
-  - component: {fileID: 839207267}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &839207267
+--- !u!114 &819589479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839207266}
+  m_GameObject: {fileID: 819589475}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 694350967d25b594c956f20958f4bc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &839207268
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839207266}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 440.3039, y: 13.5252, z: 172.83803}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1145454237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1089,7 +1059,7 @@ Transform:
   m_Children:
   - {fileID: 693629450}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1728402885
 MonoBehaviour:
@@ -1268,5 +1238,5 @@ Transform:
   m_Children:
   - {fileID: 1386217892}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
