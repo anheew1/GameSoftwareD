@@ -8,8 +8,7 @@ TagManager:
   - ObstacleUnfixed
   - GoalSpot
   - ObstacleFix
-  - StartPoint
-  - EndPoint
+  - StartSpot
   layers:
   - Default
   - TransparentFX
