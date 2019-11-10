@@ -51,6 +51,23 @@ public class CarUIManager : MonoBehaviour
 
     void OnGUI(){      
     
+    //차량파손 상태 GUI 시작
+     GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
+     GUILayout.BeginVertical();
+     GUILayout.Space(10);
+     GUILayout.BeginHorizontal();
+     GUILayout.FlexibleSpace();
+
+     GUILayout.Label(TimeManager.TimeText);         //타이머 표시 
+     GUILayout.Space(15);
+
+     GUILayout.EndHorizontal();
+     GUILayout.FlexibleSpace();
+     GUILayout.EndVertical();
+     GUILayout.EndArea();
+
+    //차량파손 상태 GUI 끝
+
     //현재 어느 스테이지에 있는지 알려주기 위한 GUI 시작
     GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));      
     GUILayout.BeginHorizontal();        

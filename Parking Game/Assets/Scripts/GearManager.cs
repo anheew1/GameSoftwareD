@@ -28,10 +28,15 @@ public class GearManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P)) // 주차 키 입력 확인
         {
-            GearStatus *= 0; // 주차 상태로 변경
-            
-            if (CarDamage.OnGoalSpot){       //주차구역 안에 있다면
-                GameManager.PassGame();     //주차완료
+            GearStatus *= 0;            // 주차 상태로 변경
+
+            if (CarDamage.OnGoalSpot ){       //주차구역 안에 있다면
+                if (FrontCheck.FrontIn == true && BackCheck.BackIn == true){    //차량 전체가 들어갔을 경우
+                    GameManager.PassGame();     //주차완료
+                }else{                                                          //차량 전체가 안 들어갔을 경우
+                    GameManager.EndGame();     //주차실패
+
+                }
 
             }else{                         //주차구역 밖에 있다면
                 GameManager.EndGame();     //주차실패

@@ -37,10 +37,10 @@ void OnTriggerEnter(Collider other)                         //트리거 안으�
                 GameManager.EndGame();
             } 
         }
-        
         if (other.gameObject.tag == "GoalSpot"){       //도착지점이라면  
             OnGoalSpot = true;    
         }
+
     }
 
 void OnTriggerExit(Collider other){         //트리거를 벗어난다면!

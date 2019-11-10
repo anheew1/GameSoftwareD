@@ -10,7 +10,8 @@ public class ScoreManager : MonoBehaviour
 
     public int DamageLimit;         //스테이지 별 남겨야하는 파손도
 
-    public bool IsReverseParking;   //후진 주차가 되어 있는가
+    public static bool IsReverseParking = false;   //후진 주차가 되어 있는가
+
 
     // Start is called before the first frame update
     void Start()

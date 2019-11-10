@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static bool IsSuccess = false;       //목표 지점에 도착했는지!
     public static int StageLevel = 0;           //Scene index 를 저장할 변수
 
+
     /*
     Vector3 StartingPos;            //시작위치
     Quaternion StartingRotate;      //시작로테이트
@@ -25,13 +26,8 @@ public class GameManager : MonoBehaviour
     public static void EndGame(){           //체력이 다 달아서 게임이 종료되면!
         
         Time.timeScale = 0f;
+        IsEnded = true;                 //ui 불러내기
         
-        if (CarUIManager.Damage <= 0){      //체력이 다 달아서 게임이 종료 됐다면
-            IsEnded = true;                 //ui 불러내기
-        }
-        if (!CarDamage.OnGoalSpot){         //주차구역이 아니라면!
-            IsEnded = true;                 //ui 불러내기
-        }
     }
     public static void PassGame(){          //목표 지점에 도착해서 게임이 종료 됐다면
     
