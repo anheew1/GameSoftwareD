@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CarUIManager : MonoBehaviour
 {
-    public int maxDamage = 3;               //최대 생명력
-    public static int Damage = 3;           //현재 생명력
+    public static int Damage = 100;           //현재 생명력
     public GameObject Canvas; // 캔버스 오브젝트 선언
     public GameObject Gear; // 기어 오브젝트 선언
     public GameObject Stick; // 기어 스틱 오브젝트 선언
 
+    public Image DamageImage; // 데미지 그래프
+    public Text DamageText; // 데미지 텍스트
+
     void Start()
     {
-        Damage = maxDamage;                 //게임 시작될 때 현재 체력을 최대 체력으로 셋팅
+        Damage = 100;                 //게임 시작될 때 현재 체력을 최대 체력으로 셋팅
         Stick = GameObject.Find("Stick"); //스틱 오브젝트 찾아서 초기화
         Stick.transform.localPosition = new Vector3(18, 29, 0); // 처음 시작시에는 기어스틱이 P에 위치
+        DamageText = GameObject.Find("DamageText").GetComponent<Text>();
+        DamageImage = GameObject.Find("DamageImage").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -40,36 +45,11 @@ public class CarUIManager : MonoBehaviour
                 Stick.transform.localPosition = new Vector3(18, 29, 0); //P에 스틱을 위치시킴
             }
         }
+        DamageImage.fillAmount = Damage / 100f;
+        DamageText.text = string.Format("{0}/100", Damage);
     }
 
     void OnGUI(){      
-
-    //차량파손 상태 GUI 시작
-     GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-     GUILayout.BeginVertical();
-     GUILayout.Space(10);
-     GUILayout.BeginHorizontal();
-     GUILayout.Space(15);
-
-    //빨간색 하트로 파손 상태 표현
-     string heart = "";
-     for (int i=0; i<Damage;i++){
-         heart += "<color=#ff0000>" + "♥ " + "</color>";
-     }
-     GUILayout.Label(heart);
-     
-     GUILayout.FlexibleSpace();
-
-     GUILayout.Label(TimeManager.TimeText);
-     GUILayout.Space(15);
-
-     GUILayout.EndHorizontal();
-     GUILayout.FlexibleSpace();
-     GUILayout.EndVertical();
-     GUILayout.EndArea();
-    //차량파손 상태 GUI 끝
-
-
     
     //현재 어느 스테이지에 있는지 알려주기 위한 GUI 시작
     GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));      
