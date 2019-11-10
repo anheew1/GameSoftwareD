@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
         if (CarUIManager.Damage <= 0){      //체력이 다 달아서 게임이 종료 됐다면
             IsEnded = true;                 //ui 불러내기
         }
+        if (!CarDamage.OnGoalSpot){         //주차구역이 아니라면!
+            IsEnded = true;                 //ui 불러내기
+        }
     }
     public static void PassGame(){          //목표 지점에 도착해서 게임이 종료 됐다면
     

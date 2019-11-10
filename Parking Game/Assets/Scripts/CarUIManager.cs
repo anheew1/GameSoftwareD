@@ -154,7 +154,7 @@ public class CarUIManager : MonoBehaviour
 
             GUILayout.BeginHorizontal();        
             GUILayout.FlexibleSpace();
-            GUILayout.Label("<color=#000000>" + "성공!"+ "</color>");
+            GUILayout.Label("<color=#000000>" + "주차완료!"+ "</color>");
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
 

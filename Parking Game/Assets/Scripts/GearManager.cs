@@ -25,11 +25,21 @@ public class GearManager : MonoBehaviour
                 GearStatus *= -1; // 전진, 후진 사이에서 변경
 
 		}
+
         if (Input.GetKeyDown(KeyCode.P)) // 주차 키 입력 확인
         {
             GearStatus *= 0; // 주차 상태로 변경
+            
+            if (CarDamage.OnGoalSpot){       //주차구역 안에 있다면
+                GameManager.PassGame();     //주차완료
+
+            }else{                         //주차구역 밖에 있다면
+                GameManager.EndGame();     //주차실패
+            }
+            
         }
-        if (GameManager.IsEnded || GameManager.IsSuccess)
+
+        if (GameManager.IsEnded || GameManager.IsSuccess)   
         {
             GearStatus = 0;
         }

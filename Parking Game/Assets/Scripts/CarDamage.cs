@@ -13,6 +13,7 @@ public class CarDamage : MonoBehaviour
 
     Rigidbody rigid;                                        //리지드 선언
     
+    public static bool OnGoalSpot = false;                  //주차 지역 위에 있는지 
     void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody>();     //리지드 컴포넌트를 가져온다.
@@ -26,24 +27,25 @@ public class CarDamage : MonoBehaviour
     {
     }
 
-void OnTriggerEnter(Collider other)
+void OnTriggerEnter(Collider other)                         //트리거 안으로 들어갈 때
     {
-        
-        
         if (other.gameObject.tag == "ObstacleFix" )         //장애물을 만나게 되면
         {
-
-            CarUIManager.Damage--;                          //차량 파손
+            CarUIManager.Damage -= 5;                          //차량 파손
 
             if(CarUIManager.Damage <=0){                    //다 파손 되면 게임종료
                 GameManager.EndGame();
             } 
         }
         
-        else if (other.gameObject.tag == "GoalSpot"){       //도착지점이라면  
-            GameManager.PassGame();
+        if (other.gameObject.tag == "GoalSpot"){       //도착지점이라면  
+            OnGoalSpot = true;    
         }
     }
+
+void OnTriggerExit(Collider other){         //트리거를 벗어난다면!
+            OnGoalSpot = false;
+}
 
 /*
 //무적상태 표현
