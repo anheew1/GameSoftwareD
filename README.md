@@ -5,6 +5,7 @@
 **Unity version - 2019.2.10f1**
 
 **항상 작업 시작하기전에 Github에서 FETCH & PULL 하기!!!!!!**
+
 **깃 허브 ReadMe에 업데이트 기록 꾸준히 하면 좋을 듯**
 
 [1차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/1st-Meeting-Log)
@@ -92,18 +93,12 @@ D
 
 * 스테이지에서 장애물 관련으로 obstacleFix 와 obstacleUnfix 태그를 구분함
 
-
-
 ### 씬 연결 - (스테이지팀 담당)
 * 월요일 밤까지 끝낼 예정
 
 * Home버튼 과 Next 버튼 씬 연결이 필요하다
 
 * Home 버튼은 메뉴로 가고 Next 버튼은 다음 스테이지로 가게끔
-
-
-
-
 
 ## 11월 4일 차량팀 개발 사항
 * CarDamage(차량 손상 제어)
