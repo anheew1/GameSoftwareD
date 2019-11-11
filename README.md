@@ -6,7 +6,9 @@
 
 **항상 작업 시작하기전에 Github에서 FETCH & PULL 하기!!!!!!**
 
-[이전 회의록](https://github.com/anheew1/GameSoftwareD/wiki/1st-Meeting-Log)
+[1차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/1st-Meeting-Log)
+[2차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/2nd-Meeting-Log)
+[3차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/3rd-Meeting-Log)
 
 ---
 
