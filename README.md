@@ -5,6 +5,7 @@
 **Unity version - 2019.2.10f1**
 
 **항상 작업 시작하기전에 Github에서 FETCH & PULL 하기!!!!!!**
+**깃 허브 ReadMe에 업데이트 기록 꾸준히 하면 좋을 듯**
 
 [1차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/1st-Meeting-Log)
 [2차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/2nd-Meeting-Log)
@@ -187,6 +188,8 @@ D
 
 * 별 개수 기록 데이터를 저장!
 
+## 다음 일정은 2019-11-18 9:30 AM
+실제로 파일 합쳐서 구현이 필요하는 시간
 
 ## Images
 
