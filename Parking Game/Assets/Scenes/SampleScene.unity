@@ -1241,6 +1241,7 @@ MonoBehaviour:
   Stick: {fileID: 0}
   DamageImage: {fileID: 0}
   DamageText: {fileID: 0}
+  SceneChanger: {fileID: 0}
 --- !u!1 &1089697874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,6 +2216,7 @@ GameObject:
   - component: {fileID: 2046396647}
   - component: {fileID: 2046396646}
   - component: {fileID: 2046396645}
+  - component: {fileID: 2046396648}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2270,6 +2272,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2046396648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046396644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694350967d25b594c956f20958f4bc33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8401609294039294563
 PrefabInstance:
   m_ObjectHideFlags: 0

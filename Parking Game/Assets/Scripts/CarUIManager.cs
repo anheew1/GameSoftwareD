@@ -13,6 +13,7 @@ public class CarUIManager : MonoBehaviour
 
     public Image DamageImage; // 데미지 그래프
     public Text DamageText; // 데미지 텍스트
+    public SceneChanger SceneChanger; // 씬 변경클래스
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class CarUIManager : MonoBehaviour
         Stick.transform.localPosition = new Vector3(18, 29, 0); // 처음 시작시에는 기어스틱이 P에 위치
         DamageText = GameObject.Find("DamageText").GetComponent<Text>();
         DamageImage = GameObject.Find("DamageImage").GetComponent<Image>();
+        SceneChanger = GameObject.Find("EventSystem").GetComponent<SceneChanger>(); // 이벤트 시스템에 Scnechanger를 담음
     }
 
     // Update is called once per frame
@@ -124,16 +126,21 @@ public class CarUIManager : MonoBehaviour
             if (GUILayout.Button("<color=#000000>" + "Home"+ "</color>")){
                 GameManager.IsEnded = false;        //UI를 없애준다
                 GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
-                SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
+               // SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+
+                SceneChanger.ChangeToSelectMap(); // 스테이지 맵화면으로 넘어감
+
             }
 
             //현재 스테이지 다시 시작하기!
             if (GUILayout.Button("<color=#000000>" + "Restart"+ "</color>")){
                 GameManager.IsEnded = false;
-                GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
-                SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
+                //GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
+                //SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+
+                SceneChanger.RestartScene(); // 스테이지 재시작
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndVertical();        
@@ -174,25 +181,35 @@ public class CarUIManager : MonoBehaviour
             //stage 0 로 돌아가기(Home)
             if (GUILayout.Button("<color=#000000>" + "Home"+ "</color>")){
                 GameManager.IsSuccess = false;
-                GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
-                SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
+                //GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
+                //SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+
+                SceneChanger.ChangeToSelectMap(); // 스테이지 맵으로 변경
             }
 
             //현재 스테이지 다시 시작하기!
             if (GUILayout.Button("<color=#000000>" + "Restart"+ "</color>")){
                 GameManager.IsSuccess = false;
-                GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
-                SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
+               // GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
+               // SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+
+                SceneChanger.RestartScene(); // 스테이지 재시작
             }
 
             //다음 스테이지 다시 시작하기!
             if (GUILayout.Button("<color=#000000>" + "Next"+ "</color>")){
                 GameManager.IsSuccess = false;
-                GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
-                SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
+                // GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
+                // SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+
+                /* ChangeToNext는 다음 스테이지로 변경하는 함수
+                 * Stage00 -> Stage01, Stage01 -> Stage02
+                 * 예외적으로 SampleScene에서 Next 클릭시 Stage00으로 향하게 만들어 놓음 */
+                SceneChanger.ChangeToNext(); 
+                
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
