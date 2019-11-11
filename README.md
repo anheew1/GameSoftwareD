@@ -173,6 +173,23 @@ D
 * GearManager
    * P 누르면 게임 종료
 
+## 11월 11일 차량 관련 개발 사항 
+
+* CarUIManager
+   * SceneChanger 스크립트를 넣어 기능을 처리함
+   * Home 버튼은 SelectMap으로 전환 : ChangeToSelectMap()
+   * Restart 버튼은 다시 씬을 재생하도록 :  RestartScene()
+   * Next 버튼은 SampleScene에서는 Stage00으로(예외적인 경우),다른 스테이지에서는 그 다음 스테이지로 갈 수 잇도록 처리함 ( ChangeToNext() )
+* SceneChanger
+   * 대부분의 씬 변경은 스트링을 입력하여 변경함
+   * index로 처리시 빌드 세팅에 따라 Scene변화에 문제가 생길 수 있음
+
+혹시 몰라서 제가 CarUIManager에서 삭제한 기능은 주석으로 남겨놨습니다.
+
+자세한건 Commit 기록이나 주석들 보시면 아실거에요
+
+그리고 개인적으로는 GameManager의 StageLevel은 추천하지 않는 방식임. (BuildSetting의 변경으로 문제가 있을 수 있으니)
+
 
 ## 그 외 추가로 구현하고 싶은 것
 * 미니맵
