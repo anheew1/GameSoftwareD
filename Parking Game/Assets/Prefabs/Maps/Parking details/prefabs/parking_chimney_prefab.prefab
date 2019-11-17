@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4714993836445754}
   - component: {fileID: 33048628007845194}
   - component: {fileID: 23068680151179940}
+  - component: {fileID: 3113944118133754467}
   m_Layer: 0
   m_Name: parking_chimney_prefab
   m_TagString: ObstacleFixed
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3113944118133754467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919383431895154}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6284888, y: 5.3677125, z: 1.6200954}
+  m_Center: {x: 0, y: 2.6838553, z: 0.0000015497207}

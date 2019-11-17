@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4898287314641716}
   - component: {fileID: 33821393113978894}
   - component: {fileID: 23579793629763670}
+  - component: {fileID: 317005427913530129}
   m_Layer: 0
   m_Name: parking_barrier_prefab
   m_TagString: ObstacleFixed
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &317005427913530129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458726546896000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.77959317, y: 3.4313915, z: 3.6766455}
+  m_Center: {x: 0.0000012964009, y: 1.715695, z: -0.0000002980232}

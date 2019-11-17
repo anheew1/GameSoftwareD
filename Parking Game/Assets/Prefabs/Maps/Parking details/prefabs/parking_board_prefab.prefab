@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4967172895363486}
   - component: {fileID: 33803837599352576}
   - component: {fileID: 23030407481608464}
+  - component: {fileID: 9100783956829230461}
   m_Layer: 0
   m_Name: parking_board_prefab
   m_TagString: ObstacleFixed
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9100783956829230461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468900314373996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14667255, y: 1.8367268, z: 0.984492}
+  m_Center: {x: 0, y: 0.91836435, z: -0.00000001490116}
