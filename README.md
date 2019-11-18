@@ -11,6 +11,7 @@
 [1차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/1st-Meeting-Log)
 [2차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/2nd-Meeting-Log)
 [3차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/3rd-Meeting-Log)
+[4차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/4th-Meeting-Log)
 
 ---
 
@@ -63,6 +64,16 @@ GoalSpot (도착지점)
 
 * 각 장애물마다 충돌 모델이 필요함
 
+* car가 startpos에서 시작하도록 하고 동시에 rotation도 받아야함
+
+* Rename Tag ( ObstacleUnfixed -> ObstacleUnfix )
+
+* stage 바깥을 벽으로 둘러싸고 background 적용
+
+* Start UI랑 SelectMap UI 디자인 개선이 필요.
+
+* SelectMap에 스코어와 별 넣기
+
 # 차량 관련 Requirements
 
 * 충돌시 점수 깎이고 Damage(파손도)로 계산 (1~100%)
@@ -88,6 +99,10 @@ D
 * 핸들을 놨을 때 바퀴가 정위치로 돌아가는 것이 필요함
 
 * 차 속도를 전체적으로 줄이는 것이 필요함
+
+* ObstacleUnfix tag 관련의 파손도 처리가 필요함
+
+* Car에관한 미세한 value 조정과 bug fix
 
 ### 다음주까지 스테이지에 차 적용 (차량팀 담당)
 
@@ -190,18 +205,22 @@ D
 
 그리고 개인적으로는 GameManager의 StageLevel은 추천하지 않는 방식임. (BuildSetting의 변경으로 문제가 있을 수 있으니)
 
+## 11 월 18일 개발 사항
+
+* Car 프리팹을 Stage에 적용함 (성공)
+
 
 ## 그 외 추가로 구현하고 싶은 것
 * 미니맵
 
 * 마우스로 화면 돌리는 거
 
-* 점수 기반으로 별 표시 ex) 별 1-3개
+* 사용자가 시작하기전에 맵 위에서 카메라 돌면서 
+맵 구조를 파악 할 수 있도록 함
 
-* 별 개수 기록 데이터를 저장!
+## 다음 일정은 2019-11-25 10:00 AM
 
-## 다음 일정은 2019-11-18 9:30 AM
-실제로 파일 합쳐서 구현이 필요하는 시간
+그리고 11-28 목요일
 
 ## Images
 
