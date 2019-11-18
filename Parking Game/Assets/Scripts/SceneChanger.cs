@@ -53,6 +53,6 @@ public class SceneChanger : MonoBehaviour
     public void RestartScene()
     {
         int curSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(curSceneIndex);
+        SceneManager.LoadScene(curSceneIndex , LoadSceneMode.Single);
     }
 }
