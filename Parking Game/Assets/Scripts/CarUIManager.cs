@@ -22,7 +22,7 @@ public class CarUIManager : MonoBehaviour
         Stick.transform.localPosition = new Vector3(18, 29, 0); // 처음 시작시에는 기어스틱이 P에 위치
         DamageText = GameObject.Find("DamageText").GetComponent<Text>();
         DamageImage = GameObject.Find("DamageImage").GetComponent<Image>();
-        SceneChanger = GameObject.Find("EventSystem").GetComponent<SceneChanger>(); // 이벤트 시스템에 Scnechanger를 담음
+        SceneChanger = GameObject.FindGameObjectWithTag("Player").GetComponent<SceneChanger>(); // Player tag로 찾음
     }
 
     // Update is called once per frame
