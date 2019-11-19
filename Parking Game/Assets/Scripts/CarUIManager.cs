@@ -79,10 +79,10 @@ public class CarUIManager : MonoBehaviour
 
     //스테이지는 총 3개라고 임의 가정
     if (!GameManager.IsEnded && GameManager.StageLevel < 3){
-            GUILayout.Label(" Stage " + (GameManager.StageLevel));
+            GUILayout.Label("Stage " + (GameManager.StageLevel));
     }
     else{
-            GUILayout.Label(" Stage End");
+            GUILayout.Label("Stage End");
     }
 
     GUILayout.Space(5);
