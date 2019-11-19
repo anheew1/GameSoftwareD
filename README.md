@@ -62,11 +62,11 @@ GoalSpot (도착지점)
 
 * goalspot 3D 모델이 필요함
 
-* 각 장애물마다 충돌 모델이 필요함
+* ~~각 장애물마다 충돌 모델이 필요함~~
 
-* car가 startpos에서 시작하도록 하고 동시에 rotation도 받아야함
+* ~~car가 startpos에서 시작하도록 하고 동시에 rotation도 받아야함~~
 
-* Rename Tag ( ObstacleUnfixed -> ObstacleUnfix )
+* ~~Rename Tag ( ObstacleUnfixed -> ObstacleUnfix )~~
 
 * stage 바깥을 벽으로 둘러싸고 background 적용
 
@@ -92,7 +92,7 @@ D
 
 * 차 파손도 관련으로 정밀한 조정이 필요함
 
-* 원하는 구역이 아닐 때 P로 주차했을 때 실패뜨는 것은 수정이 필요함
+* 원하는 구역이 아닐 때 P로 주차했을 때 실패뜨는 것은 수정이 필요함 (보류)
 
 * 핸들이 너무 빠르게 움직임
 
@@ -100,20 +100,18 @@ D
 
 * 차 속도를 전체적으로 줄이는 것이 필요함
 
-* ObstacleUnfix tag 관련의 파손도 처리가 필요함
+* ~~ObstacleUnfix tag 관련의 파손도 처리가 필요함~~
+
+* ~~조작법 UI 추가~~
 
 * Car에관한 미세한 value 조정과 bug fix
 
-### 다음주까지 스테이지에 차 적용 (차량팀 담당)
-
-* 스테이지에서 장애물 관련으로 obstacleFix 와 obstacleUnfix 태그를 구분함
 
 ### 씬 연결 - (스테이지팀 담당)
-* 월요일 밤까지 끝낼 예정
 
-* Home버튼 과 Next 버튼 씬 연결이 필요하다
+* ~~Home버튼 과 Next 버튼 씬 연결이 필요하다~~
 
-* Home 버튼은 메뉴로 가고 Next 버튼은 다음 스테이지로 가게끔
+* ~~Home 버튼은 메뉴로 가고 Next 버튼은 다음 스테이지로 가게끔~~
 
 ## 11월 4일 차량팀 개발 사항
 * CarDamage(차량 손상 제어)
