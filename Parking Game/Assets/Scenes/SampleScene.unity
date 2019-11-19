@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1529,6 +1529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ForceAppPointDistance
       value: 0.6775147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547323152994266087, guid: 2be2798d812194e45a6f28b6bfc8ab7d,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 40706.484
       objectReference: {fileID: 0}
     - target: {fileID: 8547323153154939479, guid: 2be2798d812194e45a6f28b6bfc8ab7d,
         type: 3}
