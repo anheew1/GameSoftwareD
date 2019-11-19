@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static bool IsSuccess = false;       //목표 지점에 도착했는지!
     public static int StageLevel = 0;           //Scene index 를 저장할 변수
 
+    GameObject StartSpot;                       //StartSpot 오브젝트
+    Vector3 StartPosition;                      //StartSpot 위치
+     
 
     /*
     Vector3 StartingPos;            //시작위치
@@ -16,6 +19,10 @@ public class GameManager : MonoBehaviour
     */
 
     void Awake(){
+        StartSpot = GameObject.FindWithTag("StartSpot");        //StartSpot 오브젝트를 가져온다.
+        StartPosition = StartSpot.transform.position;           //StartSpot의 위치를 가져온다.
+        this.transform.position = StartPosition;                //자동차를 StartSpot에서 시작하게 한다.
+        
         Time.timeScale = 0f;               //씬 로드 후 정지 시킨다.
     }
     
