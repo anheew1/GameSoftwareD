@@ -62,11 +62,11 @@ GoalSpot (도착지점)
 
 * goalspot 3D 모델이 필요함
 
-~~각 장애물마다 충돌 모델이 필요함~~
+* ~~각 장애물마다 충돌 모델이 필요함~~
 
-~~car가 startpos에서 시작하도록 하고 동시에 rotation도 받아야함~~
+* ~~car가 startpos에서 시작하도록 하고 동시에 rotation도 받아야함~~
 
-~~Rename Tag ( ObstacleUnfixed -> ObstacleUnfix )
+* ~~Rename Tag ( ObstacleUnfixed -> ObstacleUnfix )~~
 
 * stage 바깥을 벽으로 둘러싸고 background 적용
 
@@ -107,7 +107,7 @@ D
 * Car에관한 미세한 value 조정과 bug fix
 
 
-~~### 씬 연결 - (스테이지팀 담당) ~~
+### 씬 연결 - (스테이지팀 담당)
 
 * ~~Home버튼 과 Next 버튼 씬 연결이 필요하다~~
 
