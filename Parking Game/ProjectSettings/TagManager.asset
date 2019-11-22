@@ -9,6 +9,7 @@ TagManager:
   - GoalSpot
   - ObstacleFix
   - StartSpot
+  - Wall
   layers:
   - Default
   - TransparentFX
