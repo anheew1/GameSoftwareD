@@ -14,9 +14,9 @@ public class WheelDrive : MonoBehaviour
 	[Tooltip("최대 휠 각도")]
 	public float maxAngle = 30f;
 	[Tooltip("최대 휠 힘")]
-	public float maxTorque = 300f;
+	public float maxTorque = 1f;
 	[Tooltip("최대 브레이크 힘")]
-	public float brakeTorque = 50000f;
+	public float brakeTorque = 70000f;
 	[Tooltip("If you need the visual wheels to be attached automatically, drag the wheel shape here.")]
 	public GameObject wheelShape;
 
