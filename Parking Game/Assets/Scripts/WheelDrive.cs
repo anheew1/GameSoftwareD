@@ -68,10 +68,10 @@ public class WheelDrive : MonoBehaviour
 				//누르는 만큼 -30~0 , 0~30 사이의 값이 angle로 들어감
 	
 		if (Input.GetAxis("Horizontal") > 0){
-			wheelangle += 1.5f;
+			wheelangle += 1.11f;
 		}
 		if (Input.GetAxis("Horizontal") < 0){
-			wheelangle -= 1.5f;
+			wheelangle -= 1.11f;
 		}
 		if (wheelangle >= 30f){
 			wheelangle = 30f;
