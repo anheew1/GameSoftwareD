@@ -28,8 +28,8 @@ public class CamMovesAtStart : MonoBehaviour
         CamStartPoses[0] = CamStartPos;
         CamStartPoses[1] = new Vector3(0, 0.5f, 14);
         CamStartPoses[2] = new Vector3(-4.9f, 1, -1);
-        CamStartPoses[3] = new Vector3(5, 1.3f, 13.1f);
-        CamStartPoses[4] = new Vector3(-1.8f, 1.75f, 1.5f);
+        CamStartPoses[3] = new Vector3(-1.8f, 1.75f, 1.5f);
+        CamStartPoses[4] = new Vector3(6.3f, 1.66f, 15.36f);
     }
 
     // Update is called once per frame
@@ -59,6 +59,7 @@ public class CamMovesAtStart : MonoBehaviour
         if (mode == 2)
         {
             transform.rotation = Quaternion.Euler(new Vector3(5f, 20f, 0));
+            transform.Translate(Vector3.forward * Time.deltaTime*0.1f);
             time += Time.deltaTime;
             if (time > 6) isFade = true;
         }
@@ -71,7 +72,8 @@ public class CamMovesAtStart : MonoBehaviour
         }
         if ( mode == 4)
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0f, -150f, 0f));
+            transform.rotation = Quaternion.Euler(new Vector3(5f, -150f, 0f));
+            transform.Translate(Vector3.forward * Time.deltaTime * 0.5f);
             time += Time.deltaTime;
             if (time > 6) isFade = true;
         }
