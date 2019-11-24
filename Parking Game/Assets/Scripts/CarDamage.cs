@@ -29,7 +29,7 @@ public class CarDamage : MonoBehaviour
 
 void OnTriggerEnter(Collider other)                         //트리거 안으로 들어갈 때
     {
-        if (other.gameObject.tag == "ObstacleFix" || other.gameObject.tag == "ObstacleUnFixed" || other.gameObject.tag == "ObstacleFixed")         //장애물을 만나게 되면
+        if (other.gameObject.tag == "ObstacleFix" || other.gameObject.tag == "ObstacleUnfixed" || other.gameObject.tag == "ObstacleFixed")         //장애물을 만나게 되면
         {
             CarUIManager.Damage -= 5;                          //차량 파손
 

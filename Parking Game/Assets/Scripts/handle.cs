@@ -15,10 +15,10 @@ public class handle : MonoBehaviour
     void Update()
     {
         if (Input.GetAxis("Horizontal") > 0){
-         handleangle += 27f;
+         handleangle += 200f * Time.deltaTime;
       }
       if (Input.GetAxis("Horizontal") < 0){
-         handleangle -= 27f;
+         handleangle -= 200f * Time.deltaTime;
       }
       if (handleangle >= 540f){
          handleangle = 540f;
@@ -27,7 +27,7 @@ public class handle : MonoBehaviour
          handleangle = -540f;
       }
         if (handleangle < 540.0f && handleangle > -540.0f){
-            this.transform.rotation = Quaternion.Euler(0.0f,0.0f,-handleangle);
+            this.transform.rotation = Quaternion.Euler(0.0f,0.0f,-handleangle );
         }
 
         
