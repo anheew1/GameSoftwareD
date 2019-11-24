@@ -115,7 +115,6 @@ public class CamMovesAtStart : MonoBehaviour
             {
                 mode = 0;
             }
-            Debug.Log(mode);
             tr.transform.position = CamStartPoses[mode];
             isChgMode = true;
         }
