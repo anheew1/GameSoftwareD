@@ -29,23 +29,17 @@ public class CarUIManager : MonoBehaviour
     void Update()
     {
         if(GameManager.IsStarted){
-            if (Input.GetKeyDown(KeyCode.R)) //기어 변경 키 눌렸는지 확인
+            if(GearManager.GearStatus == -1 || GearManager.GearStatus == 0) //기어 상태가 R인 경우
             {
-                if(GearManager.GearStatus == -1) //기어 상태가 R인 경우
-                {
-                    Stick.transform.localPosition = new Vector3(18, 0, 0); //R에 스틱을 위치시킴
-                }
-                if(GearManager.GearStatus == 1) //기어 상태가 D인 경우
-                {
-                    Stick.transform.localPosition = new Vector3(18, -33, 0); //D에 스틱을 위치시킴
-                }
+                Stick.transform.localPosition = new Vector3(18, 0, 0); //R에 스틱을 위치시킴
             }
-            if (Input.GetKeyDown(KeyCode.P)) //주차 전환 키 눌렸는지 확인
+            if(GearManager.GearStatus == 1) //기어 상태가 D인 경우
             {
-                if(GearManager.GearStatus == 0) //기어 상태가 P인 경우(혹시 모를 오류를 방지하기 위해 넣어둠)
-                {
-                    Stick.transform.localPosition = new Vector3(18, 29, 0); //P에 스틱을 위치시킴
-                }
+                Stick.transform.localPosition = new Vector3(18, -33, 0); //D에 스틱을 위치시킴
+            }
+            if(GearManager.GearStatus == 0) //기어 상태가 P인 경우(혹시 모를 오류를 방지하기 위해 넣어둠)
+            {
+                Stick.transform.localPosition = new Vector3(18, 29, 0); //P에 스틱을 위치시킴
             }
         }
         DamageImage.fillAmount = Damage / 100f;
@@ -129,6 +123,9 @@ public class CarUIManager : MonoBehaviour
                 GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
                // SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+                GearManager.GearStatus = 0;
+
+
 
                 SceneChanger.ChangeToSelectMap(); // 스테이지 맵화면으로 넘어감
 
@@ -140,6 +137,7 @@ public class CarUIManager : MonoBehaviour
                 //GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
                 //SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
+                GearManager.GearStatus = 0;
 
                 SceneChanger.RestartScene(); // 스테이지 재시작
             }
