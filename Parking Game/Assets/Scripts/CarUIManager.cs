@@ -28,23 +28,24 @@ public class CarUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.R)) //기어 변경 키 눌렸는지 확인
-        {
-            if(GearManager.GearStatus == -1) //기어 상태가 R인 경우
+        if(GameManager.IsStarted){
+            if (Input.GetKeyDown(KeyCode.R)) //기어 변경 키 눌렸는지 확인
             {
-                Stick.transform.localPosition = new Vector3(18, 0, 0); //R에 스틱을 위치시킴
+                if(GearManager.GearStatus == -1) //기어 상태가 R인 경우
+                {
+                    Stick.transform.localPosition = new Vector3(18, 0, 0); //R에 스틱을 위치시킴
+                }
+                if(GearManager.GearStatus == 1) //기어 상태가 D인 경우
+                {
+                    Stick.transform.localPosition = new Vector3(18, -33, 0); //D에 스틱을 위치시킴
+                }
             }
-            if(GearManager.GearStatus == 1) //기어 상태가 D인 경우
+            if (Input.GetKeyDown(KeyCode.P)) //주차 전환 키 눌렸는지 확인
             {
-                Stick.transform.localPosition = new Vector3(18, -33, 0); //D에 스틱을 위치시킴
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.P)) //주차 전환 키 눌렸는지 확인
-        {
-            if(GearManager.GearStatus == 0) //기어 상태가 P인 경우(혹시 모를 오류를 방지하기 위해 넣어둠)
-            {
-                Stick.transform.localPosition = new Vector3(18, 29, 0); //P에 스틱을 위치시킴
+                if(GearManager.GearStatus == 0) //기어 상태가 P인 경우(혹시 모를 오류를 방지하기 위해 넣어둠)
+                {
+                    Stick.transform.localPosition = new Vector3(18, 29, 0); //P에 스틱을 위치시킴
+                }
             }
         }
         DamageImage.fillAmount = Damage / 100f;
