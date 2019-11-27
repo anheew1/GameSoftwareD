@@ -10,7 +10,8 @@ public class CarUIManager : MonoBehaviour
     public GameObject Canvas; // 캔버스 오브젝트 선언
     public GameObject Gear; // 기어 오브젝트 선언
     public GameObject Stick; // 기어 스틱 오브젝트 선언
-
+    
+    public int curStage;
     public Image DamageImage; // 데미지 그래프
     public Text DamageText; // 데미지 텍스트
     public SceneChanger SceneChanger; // 씬 변경클래스
@@ -23,6 +24,7 @@ public class CarUIManager : MonoBehaviour
         DamageText = GameObject.Find("DamageText").GetComponent<Text>();
         DamageImage = GameObject.Find("DamageImage").GetComponent<Image>();
         SceneChanger = GameObject.FindGameObjectWithTag("Player").GetComponent<SceneChanger>(); // Player tag로 SceneChanger를 찾음
+        curStage = SceneManager.GetActiveScene().buildIndex - 3;
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class CarUIManager : MonoBehaviour
 
     //스테이지는 총 3개라고 임의 가정
     if (!GameManager.IsEnded && GameManager.StageLevel < 3){
-            GUILayout.Label("Stage " + (GameManager.StageLevel));
+            GUILayout.Label("Stage " + (curStage));
     }
     else{
             GUILayout.Label("Stage End");
@@ -196,19 +198,19 @@ public class CarUIManager : MonoBehaviour
 
                 SceneChanger.RestartScene(); // 스테이지 재시작
             }
+            if(curStage != 2){
+                //다음 스테이지 다시 시작하기!
+                if (GUILayout.Button("<color=#000000>" + "Next"+ "</color>")){
+                    GameManager.IsSuccess = false;
+                    // GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
+                    // SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
+                    GameManager.IsStarted = false;
 
-            //다음 스테이지 다시 시작하기!
-            if (GUILayout.Button("<color=#000000>" + "Next"+ "</color>")){
-                GameManager.IsSuccess = false;
-                // GameManager.StageLevel = 0;         //일단 스테이지 0으로 초기화
-                // SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
-                GameManager.IsStarted = false;
-
-                /* ChangeToNext는 다음 스테이지로 변경하는 함수
-                 * Stage00 -> Stage01, Stage01 -> Stage02
-                 * 예외적으로 SampleScene에서 Next 클릭시 Stage00으로 향하게 만들어 놓음 */
-                SceneChanger.ChangeToNext(); 
-                
+                    /* ChangeToNext는 다음 스테이지로 변경하는 함수
+                    * Stage00 -> Stage01, Stage01 -> Stage02
+                    * 예외적으로 SampleScene에서 Next 클릭시 Stage00으로 향하게 만들어 놓음 */
+                    SceneChanger.ChangeToNext(); 
+                }
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();

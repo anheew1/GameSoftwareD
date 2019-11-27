@@ -222,13 +222,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8401609293987999796}
-  m_LocalRotation: {x: -0.020998383, y: 0.8695641, z: -0.037114535, w: -0.4919755}
+  m_LocalRotation: {x: 0, y: 0.99909043, z: -0.042642944, w: 0}
   m_LocalPosition: {x: 0, y: 0.555, z: -1.795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8401103222873238183}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 4.888, y: 239, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.888, y: 180, z: 0}
 --- !u!20 &8401609293987999800
 Camera:
   m_ObjectHideFlags: 0
@@ -690,10 +690,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.315
   m_SuspensionSpring:
-    spring: 34791.418
-    damper: 5566.6274
+    spring: 34791.426
+    damper: 5566.6284
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620003
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 0.6775147
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -754,7 +754,7 @@ WheelCollider:
     spring: 40706.46
     damper: 6513.0337
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 0.6775147
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -812,10 +812,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.315
   m_SuspensionSpring:
-    spring: 34293.547
-    damper: 5486.9673
+    spring: 34293.54
+    damper: 5486.9663
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19619998
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 0.6775147
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -970,8 +970,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.315
   m_SuspensionSpring:
-    spring: 40208.58
-    damper: 6433.3726
+    spring: 40208.57
+    damper: 6433.3716
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 0.6775147

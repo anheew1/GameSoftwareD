@@ -39,7 +39,7 @@ public class SceneChanger : MonoBehaviour
             {
                 nextStageName = "Stage" + stageNum;
             }
-
+            
             SceneManager.LoadScene(nextStageName);
 
             Debug.Log("Try to Load scene :" + nextStageName);
