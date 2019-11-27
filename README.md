@@ -12,6 +12,7 @@
 [2차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/2nd-Meeting-Log)
 [3차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/3rd-Meeting-Log)
 [4차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/4th-Meeting-Log)
+[5차 회의록](https://github.com/anheew1/GameSoftwareD/wiki/5th-Meeting-Log)
 
 ---
 
@@ -60,58 +61,9 @@ GoalSpot (도착지점)
 
 ## 스테이지 관련 개선사항
 
-* goalspot 3D 모델이 필요함
+## 차 관련 개선사항
 
-* ~~각 장애물마다 충돌 모델이 필요함~~
-
-* ~~car가 startpos에서 시작하도록 하고 동시에 rotation도 받아야함~~
-
-* ~~Rename Tag ( ObstacleUnfixed -> ObstacleUnfix )~~
-
-* stage 바깥을 벽으로 둘러싸고 background 적용
-
-* Start UI랑 SelectMap UI 디자인 개선이 필요.
-
-* SelectMap에 스코어와 별 넣기
-
-# 차량 관련 Requirements
-
-* 충돌시 점수 깎이고 Damage(파손도)로 계산 (1~100%)
-
-* Damage가 100%시 게임 오버
-
-* 기어 
-P,
-R,
-D
-(이미지 3개면 구현 가능)
-
-* 전진,후진 주차 둘다 가능하되 후진 주차 시 점수를 더 많이 얻음
-
-## 차량관련 개선사항
-
-* 차 파손도 관련으로 정밀한 조정이 필요함
-
-* 원하는 구역이 아닐 때 P로 주차했을 때 실패뜨는 것은 수정이 필요함 (보류)
-
-* 핸들이 너무 빠르게 움직임
-
-* 핸들을 놨을 때 바퀴가 정위치로 돌아가는 것이 필요함
-
-* 차 속도를 전체적으로 줄이는 것이 필요함
-
-* ~~ObstacleUnfix tag 관련의 파손도 처리가 필요함~~
-
-* ~~조작법 UI 추가~~
-
-* Car에관한 미세한 value 조정과 bug fix
-
-
-### 씬 연결 - (스테이지팀 담당)
-
-* ~~Home버튼 과 Next 버튼 씬 연결이 필요하다~~
-
-* ~~Home 버튼은 메뉴로 가고 Next 버튼은 다음 스테이지로 가게끔~~
+### 다음 일정은 2019-11-27 5:00 PM ~~밥 먹을 시간은 필요~~
 
 ## 11월 4일 차량팀 개발 사항
 * CarDamage(차량 손상 제어)
@@ -215,10 +167,6 @@ D
 
 * 사용자가 시작하기전에 맵 위에서 카메라 돌면서 
 맵 구조를 파악 할 수 있도록 함
-
-## 다음 일정은 2019-11-25 10:00 AM
-
-그리고 11-28 목요일
 
 ## Images
 
