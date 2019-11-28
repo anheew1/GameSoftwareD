@@ -5,8 +5,8 @@ using UnityEngine;
 public class CamMovesAtStart : MonoBehaviour
 {
 
-    private int MAX_MODE = 5;
-    private float FADETIME = 1.0f;
+    private const int MAX_MODE = 5;
+    private const float FADETIME = 1.0f;
     private Transform tr;
     private Vector3 PlayerPos;
     private Vector3[] CamStartPoses;
@@ -30,12 +30,13 @@ public class CamMovesAtStart : MonoBehaviour
         CamStartPoses[2] = new Vector3(-4.9f, 1, -1);
         CamStartPoses[3] = new Vector3(-1.8f, 1.75f, 1.5f);
         CamStartPoses[4] = new Vector3(6.3f, 1.66f, 15.36f);
+
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         if (mode == 0)
         {
             transform.LookAt(PlayerPos);
