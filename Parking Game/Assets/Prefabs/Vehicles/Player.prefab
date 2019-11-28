@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 8565827031545745638}
   - component: {fileID: 2835717524476636829}
   m_Layer: 0
-  m_Name: TestCar1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,10 +690,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.315
   m_SuspensionSpring:
-    spring: 34791.426
-    damper: 5566.6284
+    spring: 34791.418
+    damper: 5566.6274
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620003
   m_ForceAppPointDistance: 0.6775147
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -754,7 +754,7 @@ WheelCollider:
     spring: 40706.46
     damper: 6513.0337
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 0.6775147
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -812,10 +812,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.315
   m_SuspensionSpring:
-    spring: 34293.54
-    damper: 5486.9663
+    spring: 34293.547
+    damper: 5486.9673
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 0.6775147
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -970,8 +970,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.315
   m_SuspensionSpring:
-    spring: 40208.57
-    damper: 6433.3716
+    spring: 40208.58
+    damper: 6433.3726
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 0.6775147
