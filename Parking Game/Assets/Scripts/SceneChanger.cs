@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public void ChangeToSelectMap()
-    {
-        SceneManager.LoadScene("SelectMap");
-    }
     public void ChangeToStart()
     {
         SceneManager.LoadScene("Start");

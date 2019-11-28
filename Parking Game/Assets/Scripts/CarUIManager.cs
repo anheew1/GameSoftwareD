@@ -129,7 +129,7 @@ public class CarUIManager : MonoBehaviour
 
 
 
-                SceneChanger.ChangeToSelectMap(); // 스테이지 맵화면으로 넘어감
+                SceneChanger.ChangeToStart(); // 처음으로
 
             }
 
@@ -186,7 +186,7 @@ public class CarUIManager : MonoBehaviour
                 //SceneManager.LoadScene(GameManager.StageLevel,LoadSceneMode.Single);
                 GameManager.IsStarted = false;
 
-                SceneChanger.ChangeToSelectMap(); // 스테이지 맵으로 변경
+                SceneChanger.ChangeToStart(); // 처음으로
             }
 
             //현재 스테이지 다시 시작하기!
