@@ -15,7 +15,6 @@ public class FrontCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void OnTriggerEnter(Collider other)                         //트리거 안으로 들어갈 때
