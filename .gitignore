@@ -62,4 +62,6 @@ Parking Game/sysinfo.txt
 # Crashlytics generated file
 Parking Game/crashlytics-build.properties
 
-
+# Game Save data
+Parking Game/Assets/Resources/
+Parking Game/Assets/Resources.meta
