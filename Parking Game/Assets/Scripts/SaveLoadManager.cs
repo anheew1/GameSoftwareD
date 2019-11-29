@@ -34,6 +34,10 @@ public class SaveLoadManager : MonoBehaviour
         CheckAndCreateFile();
         
         string jsonString = File.ReadAllText(filePath);
+        if (jsonString.Equals(""))
+        {
+            return dataList;
+        }
 
         JsonData jsonData = JsonMapper.ToObject(jsonString);
 
