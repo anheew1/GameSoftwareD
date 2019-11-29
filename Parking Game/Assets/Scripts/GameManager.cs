@@ -41,10 +41,7 @@ public class GameManager : MonoBehaviour
     }
     public static void PassGame(){          //목표 지점에 도착해서 게임이 종료 됐다면
 
-         float time = TimeManager.Timer;
-        SaveLoadManager.m_time = time.ToString("0.00"); // timeScale이 0이 될경우 Timer가 0으로 초기화 됨
-        // 그래서 미리 Time을 저장할 필요가 있음
-        
+        float time = TimeManager.Timer;
         Time.timeScale = 0f;
         IsSuccess = true;                   //ui 불러내기
 

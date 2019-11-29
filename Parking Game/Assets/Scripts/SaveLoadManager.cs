@@ -20,10 +20,11 @@ public class GameData
 
 public class SaveLoadManager : MonoBehaviour
 {
-    private static List<GameData> dataList = new List<GameData>();
     public static string m_time = "";
     public static string m_score = "";
-    // Update is called once per frame
+
+    private static List<GameData> dataList = new List<GameData>();
+    private static bool isLoaded = false;
 
     public static List<GameData> Load()
     {
@@ -44,11 +45,22 @@ public class SaveLoadManager : MonoBehaviour
             dataList.Add(data);
         }
 
+        isLoaded = true;
+
         return dataList;
     }
-    public List<GameData> getDataList()
+    public List<GameData> getData()
     {
-        return dataList;
+        if (isLoaded)
+        {
+            return dataList;
+        }
+        else
+        {
+            Debug.LogError("'getData()' must called after call 'Load()' ");
+            return null;
+        }
+        
     }
     public static void Save(string stage,string score="",string time = "")
     {

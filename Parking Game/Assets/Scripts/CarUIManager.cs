@@ -21,8 +21,6 @@ public class CarUIManager : MonoBehaviour
     public Text DamageText; // 데미지 텍스트
     public SceneChanger SceneChanger; // 씬 변경클래스
 
-    private bool isSaved;
-
     void Start()
     {
         Damage = 100;                 //게임 시작될 때 현재 체력을 최대 체력으로 셋팅
@@ -36,8 +34,7 @@ public class CarUIManager : MonoBehaviour
         CurrentStage = GameObject.Find("CurrentStage").GetComponent<Text>();
         ScoreRank = GameObject.Find("ScoreRank").GetComponent<Text>();
         SceneChanger = GameObject.FindGameObjectWithTag("Player").GetComponent<SceneChanger>(); // Player tag로 SceneChanger를 찾음
-        curStage = SceneManager.GetActiveScene().buildIndex - 3;
-        isSaved = false;
+        curStage = SceneManager.GetActiveScene().buildIndex - 2;
     }
 
     // Update is called once per frame
@@ -109,10 +106,5 @@ public class CarUIManager : MonoBehaviour
      GUILayout.EndVertical();
      GUILayout.EndArea();
 
-    if (!isSaved)
-            {
-                SaveLoadManager.Save(curStage.ToString(), ScoreManager.getRank().ToString()); // Time 저장은 GameManager에서 이루어짐
-                isSaved = true;
-            }
     }
 }

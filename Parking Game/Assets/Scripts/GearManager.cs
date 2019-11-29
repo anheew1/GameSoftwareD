@@ -36,6 +36,8 @@ public class GearManager : MonoBehaviour
                 if (CarDamage.OnGoalSpot ){       //주차구역 안에 있다면
                     if (FrontCheck.FrontIn == true && BackCheck.BackIn == true){    //차량 전체가 들어갔을 경우
                         ScoreManager.calcScore();
+                        int curStage = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex - 2;
+                        SaveLoadManager.Save(curStage.ToString(),ScoreManager.getRank().ToString(),TimeManager.Timer.ToString());
                         GameManager.PassGame();     //주차완료
                         CarUIManager.showSuccessUI();
                     }
