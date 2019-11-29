@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class StartUI : MonoBehaviour
 {
     private SceneChanger SceneChanger;
+    private List<GameData> dataList;
+    private GameObject selectMap;
     private bool isUIopen = false;
     // Start is called before the first frame update
     void Start()
     {
         SceneChanger = GameObject.Find("EventSystem").GetComponent<SceneChanger>();
+        selectMap = GameObject.Find("SelectMap");
+        selectMap.SetActive(false);
+
+        dataList = SaveLoadManager.Load();
     }
 
     // Update is called once per frame
@@ -23,30 +29,9 @@ public class StartUI : MonoBehaviour
             StartAlert.enabled = false;
             text.enabled = false;
             isUIopen = true;
+            selectMap.SetActive(true);
         }
         
     }
-    private void OnGUI()
-    {
-        if (!isUIopen) return;
-        // Make a background box
-        GUI.Box(new Rect(10, 10, 640, 300), "Select Map");
-
-        // Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-        if (GUI.Button(new Rect(20, 40, 80, 20), "Level 0"))
-        {
-            SceneChanger.ChangeSceneTo("Stage00");
-        }
-
-        // Make the second button.
-        if (GUI.Button(new Rect(20, 70, 80, 20), "Level 1"))
-        {
-            SceneChanger.ChangeSceneTo("Stage01");
-        }
-
-        if (GUI.Button(new Rect(20, 100, 80, 20), "Level 2"))
-        {
-            SceneChanger.ChangeSceneTo("Stage02");
-        }
-    }
+    
 }

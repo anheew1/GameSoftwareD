@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamFadeInOut : MonoBehaviour
 {
-    public UnityEngine.UI.Image image;
+    public UnityEngine.UI.Image fadeImage;
     public float alpha = 0.1f;
     public bool isActivte = false;
     public bool isFadeIn = true;
@@ -55,7 +55,7 @@ public class CamFadeInOut : MonoBehaviour
         if (fade < 1.0f && time >= 0.1f)
         {
             fade += alpha;
-            image.color = new Color(0, 0, 0, fade);
+            fadeImage.color = new Color(0, 0, 0, fade);
             time = 0;
         }
     }
@@ -64,7 +64,7 @@ public class CamFadeInOut : MonoBehaviour
         if (fade > 0.0f && time >= 0.1f)
         {
             fade -= alpha;
-            image.color = new Color(0, 0, 0, fade);
+            fadeImage.color = new Color(0, 0, 0, fade);
             time = 0;
         }
     }
