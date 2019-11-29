@@ -25,9 +25,11 @@ public class StartUI : MonoBehaviour
         if (Input.anyKeyDown && !isUIopen)
         {
             Image StartAlert = GameObject.Find("StartAlert").GetComponent<Image>();
+            Image title = GameObject.Find("Title").GetComponent<Image>();
             Text text = StartAlert.GetComponentInChildren<Text>();
             StartAlert.enabled = false;
             text.enabled = false;
+            title.enabled = false;
             isUIopen = true;
             selectMap.SetActive(true);
         }
