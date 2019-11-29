@@ -15,12 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectMap.unity
     guid: d87caf1cd6ac3044cba3ab9a541aa93b
   - enabled: 1
-    path: Assets/Scenes/Stage/Stage00.unity
+    path: Assets/Scenes/Stages/Stage00.unity
     guid: bf519536c3b5d41f8b748b6231d1cc67
   - enabled: 1
-    path: Assets/Scenes/Stage/Stage01.unity
+    path: Assets/Scenes/Stages/Stage01.unity
     guid: 8960b0177c41d4d59ad297d9c57e2ed6
   - enabled: 1
-    path: Assets/Scenes/Stage/Stage02.unity
+    path: Assets/Scenes/Stages/Stage03.unity
     guid: a9a3c46ad1b944ccbae67cbb2bb525bc
   m_configObjects: {}
