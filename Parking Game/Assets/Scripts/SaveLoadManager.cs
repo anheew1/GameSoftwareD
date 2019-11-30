@@ -1,10 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using LitJson;
 /// <summary>
-/// ¾ÈÈñ¿î °³¹ß
+/// ì•ˆí¬ìš´ ê°œë°œ
 /// </summary>
 
 public class GameData
