@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using LitJson;
+/// <summary>
+/// 안희운 개발
+/// </summary>
 
 public class GameData
 {
