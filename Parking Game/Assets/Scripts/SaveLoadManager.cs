@@ -42,6 +42,8 @@ public class SaveLoadManager : MonoBehaviour
             return dataList;
         }
 
+        dataList = new List<GameData>();
+
         JsonData jsonData = JsonMapper.ToObject(jsonString);
 
         for(int i=0;i< jsonData.Count;i++)
@@ -90,7 +92,12 @@ public class SaveLoadManager : MonoBehaviour
         {
             if (data.stage.Equals(dataList[i].stage))
             {
-                dataList[i] = data;
+                if (int.Parse(data.score) > int.Parse(dataList[i].score) ||
+                    (int.Parse(data.score) == int.Parse(dataList[i].score) && float.Parse(data.time) < float.Parse(dataList[i].time)))
+                {
+
+                    dataList[i] = data;
+                }
                 isDataExists = true;
                 break;
             }
@@ -98,10 +105,11 @@ public class SaveLoadManager : MonoBehaviour
         if (!isDataExists)
         {
             dataList.Add(data);
-        }
+        }        
         
         JsonData jsonData = JsonMapper.ToJson(dataList);
 
+        File.WriteAllText(filePath, string.Empty);
         File.WriteAllText(filePath, jsonData.ToString());
     }
     private static void CheckAndCreateFile()
