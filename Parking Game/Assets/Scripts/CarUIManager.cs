@@ -34,7 +34,7 @@ public class CarUIManager : MonoBehaviour
         CurrentStage = GameObject.Find("CurrentStage").GetComponent<Text>();
         ScoreRank = GameObject.Find("ScoreRank").GetComponent<Text>();
         SceneChanger = GameObject.FindGameObjectWithTag("Player").GetComponent<SceneChanger>(); // Player tag로 SceneChanger를 찾음
-        curStage = SceneManager.GetActiveScene().buildIndex - 2;
+        curStage = SceneManager.GetActiveScene().buildIndex - 1;
     }
 
     // Update is called once per frame
