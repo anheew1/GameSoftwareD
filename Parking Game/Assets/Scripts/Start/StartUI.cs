@@ -68,7 +68,7 @@ public class StartUI : MonoBehaviour
             float time = float.Parse(gameData.time);
             int minute = (int) time / 60;
             time -= 60 * minute;
-            timeText.text = minute + ":" + time.ToString("0.00");
+            timeText.text = minute + ":" + time.ToString("00.00");
 
         }
     }
